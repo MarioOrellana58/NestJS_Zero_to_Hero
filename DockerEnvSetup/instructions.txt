@@ -1,0 +1,78 @@
+Here's some quick setup to install everything this course needs in docker instead of your local machine.
+
+1. Create the dockerfile that exist in this folder
+
+2. Open a Command Prompt or PowerShell in the directory containing the Dockerfile and run: docker build -t nestjs-dev .
+
+3. Run the container interactively with volume binding to share files between your host and the container: docker run -it --rm -v "$(pwd):/app" -p 3000:3000 --name nestjs-dev nestjs-dev sh
+
+4. To interact with the container (e.g., run NestJS or Yarn commands), attach to the container: docker exec -it nestjs-dev sh
+
+5. Use docker exec to run commands from your host system without entering the container:
+    Example: Create a New NestJS Project
+        docker exec -it nestjs-dev nest new my-app
+
+6. Here are some instructions for windows users to create Aliases for Convenience
+    6.1: Create this folder C:\CustomScripts
+
+    6.2 Create inside that folder two files nest.bat and yarn.bat (make sure you save it as .bat not .bat.txt)
+        you can copy the files from this repo to that folder.
+
+    6.3: Add the folder path to Your PATH (Command Prompt)
+            6.3.1 Look for environment variables
+            6.3.2 Click on edit the PATH env variables
+            6.3.3 Add C:\CustomScripts there
+            6.3.4 Open a command prompt and run "echo %PATH%" it should show the C:\CustomScripts you just added in some point
+
+    6.4: Each editor has their logic in windows, so here you go
+
+        6.4.1 GitBash
+
+            6.4.1.1 Test the following
+                    cmd //c C://CustomScripts//nest.bat --version
+                    cmd //c C://CustomScripts//yarn.bat --version
+            6.4.1.2 If 6.4.1.1 worked, then do the following in GitBash
+                    nano ~/.bashrc
+
+                    alias nest="cmd //c C://CustomScripts//nest.bat"
+                    alias yarn="cmd //c C://CustomScripts//yarn.bat"
+                    
+                    source ~/.bashrc
+
+            6.4.1.3 Test
+                        nest --version
+                        yarn --version
+                        node -v
+
+
+        6.4.2 PowerShell
+
+            6.4.2.1 Create a new profile running the below line in PowerShell
+                New-Item -ItemType File -Path $PROFILE -Force
+
+            6.4.2.2 Run this in PowerShell to edit the profile
+                notepad $PROFILE
+
+            6.4.2.3 Add these lines, save and close the files
+                function nest { cmd /c "C:\CustomScripts\nest.bat $args" }
+                function yarn { cmd /c "C:\CustomScripts\yarn.bat $args" }
+                function node { cmd /c "C:\CustomScripts\node.bat $args" }
+
+            6.4.2.4 Save the profile running this
+                . $PROFILE
+
+                    Note: If PowerShell complains, run this and repeat the above step
+                        Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+            6.4.2.5 Test
+                        nest --version
+                        yarn --version
+                        node -v
+
+        6.4.2.3 Command Prompt
+
+            6.4.2.1 check 6.3
+
+7. Now if you want to run more stuff in the docker just 
+    Repeat step 4 to get into the docker
+    Install whatever you need
+    Repeat from 6.2 to 6.4.2 with the new stuff
