@@ -4,7 +4,13 @@ Here's some quick setup to install everything this course needs in docker instea
 
 2. Open a Command Prompt or PowerShell in the directory containing the Dockerfile and run: docker build -t nestjs-dev .
 
-3. Run the container interactively with volume binding to share files between your host and the container: docker run -it --rm -v "$(pwd):/app" -p 3000:3000 --name nestjs-dev nestjs-dev sh
+3. Run the container interactively with volume binding to share files between your host and the container: docker run -it -v "$(pwd):/app" -p 3000:3000 --name nestjs-dev nestjs-dev sh
+
+    3.1 you can start, pause, unpause or stop the container later with:
+        docker start nestjs-dev
+        docker pause nestjs-dev
+        docker unpause nestjs-dev
+        docker stop nestjs-dev
 
 4. To interact with the container (e.g., run NestJS or Yarn commands), attach to the container: docker exec -it nestjs-dev sh
 
