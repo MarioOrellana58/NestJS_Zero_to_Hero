@@ -8,7 +8,7 @@ Welcome to the NestJS Course Repository! 🎉
 
 ## 🚀 Why This Repository Stands Out
 
-This repository is a companion to a Udemy course on NestJS. In addition to the original content, it includes my **custom Docker setup**, designed to enhance your development workflow. Whether you're following the course or exploring NestJS independently, you'll find these additions helpful:
+This repository is a companion to this [Udemy course on NestJS](https://www.udemy.com/course/nestjs-zero-to-hero/). In addition to the original content, it includes my **custom Docker setup**, designed to enhance your development workflow. Whether you're following the course or exploring NestJS independently, you'll find these additions helpful:
 
 - **Docker Integration:** Quickly spin up your environment with a pre-configured Docker setup.
 - **Enhanced Examples:** Extra real-world examples for key concepts.
@@ -20,8 +20,8 @@ This repository is a companion to a Udemy course on NestJS. In addition to the o
 
 Before starting, ensure you meet the following requirements:
 
-- **Basic JavaScript/Node.js Knowledge:** Understanding JavaScript or Node.js fundamentals is essential.
-- **Optional TypeScript Knowledge:** While not required, familiarity with TypeScript is recommended for a smoother learning experience.
+- **Basic JavaScript/Node.js Knowledge:** Not needed lol.
+- **Optional TypeScript Knowledge:** Also not needed haha.
 
 ---
 
@@ -74,31 +74,6 @@ This course is designed for:
 
 ---
 
-## 🛠️ Getting Started
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/your-username/nestjs-course-repo.git
-cd nestjs-course-repo
-```
-
-### 2. Install Dependencies
-
-```bash
-npm install
-```
-
-### 3. Run with Docker (Optional)
-
-If you prefer using Docker, the repository includes a pre-configured setup that I created:
-
-```bash
-docker-compose up
-```
-
----
-
 ## 🌟 Why Choose This Course?
 
 Based on real-world experience, this course emphasizes:
@@ -108,19 +83,5 @@ Based on real-world experience, this course emphasizes:
 - Insights from managing systems with millions of concurrent users.
 
 Start building modern, maintainable back-end applications with NestJS today!
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! If you have ideas for improving this repository, feel free to fork it, make your changes, and submit a pull request. Let's build something amazing together.
-
----
-
-## 📄 License
-
-This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
----
 
 Happy Coding! 💻
