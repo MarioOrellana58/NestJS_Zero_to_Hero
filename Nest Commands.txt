@@ -1,0 +1,105 @@
+I'll provide a comprehensive list of Nest CLI commands, organized from simple to more complex. I'll format it in a plain text-friendly way that you can easily copy into a .txt file.
+
+NEST CLI COMMANDS REFERENCE
+============================
+
+Basic Commands
+--------------
+1. nest new [project-name]
+   - Creates a new Nest.js project with basic structure
+   - Prompts for package manager selection
+
+2. nest generate (or nest g)
+   Generates various project elements:
+   - nest g application [name]           # Create a new application
+   - nest g library [name]                # Create a new library
+   - nest g module [name]                 # Generate a module
+   - nest g controller [name]             # Generate a controller
+   - nest g service [name]                # Generate a service
+   - nest g provider [name]               # Generate a provider
+   - nest g filter [name]                 # Generate a filter
+   - nest g interceptor [name]            # Generate an interceptor
+   - nest g exception [name]              # Generate a custom exception
+   - nest g decorator [name]              # Generate a custom decorator
+   - nest g middleware [name]             # Generate middleware
+   - nest g resolver [name]               # Generate GraphQL resolver
+   - nest g pipe [name]                   # Generate a pipe
+
+3. nest build
+   - Compiles TypeScript into JavaScript
+   - Options:
+     * nest build                         # Build default project
+     * nest build [project-name]          # Build specific project
+     * nest build --watch                 # Watch mode for rebuilding
+     * nest build --webpack               # Use webpack bundler
+     * nest build --tsc                   # Use TypeScript compiler
+
+4. nest start
+   - Runs the application
+   - Options:
+     * nest start                         # Start default project
+     * nest start [project-name]          # Start specific project
+     * nest start --watch                 # Watch mode for auto-restart
+     * nest start --debug                 # Start in debug mode
+     * nest start --webpack               # Use webpack
+     * nest start --tsc                   # Use TypeScript compiler
+
+Advanced Commands
+-----------------
+5. nest info
+   - Displays system and dependencies information
+   - Useful for troubleshooting and version checks
+
+6. nest add [package]
+   - Adds and configures third-party packages
+   - Example: nest add @nestjs/mongoose
+
+7. nest generate sub-commands
+   More specific generation options:
+   - nest g resource [name]               # Full CRUD resource generation
+   - nest g class [name] [directory]      # Generate a class
+   - nest g interface [name] [directory]  # Generate an interface
+   - nest g enum [name] [directory]       # Generate an enum
+
+Configuration and Management
+----------------------------
+8. Project Structure Commands
+   - nest g app [name]                    # Create a monorepo application
+   - nest g library [name]                # Create a shareable library
+   - nest g config [name]                 # Generate configuration files
+
+9. Workspace Commands
+   - nest generate workspace [name]       # Create a new monorepo workspace
+   - nest generate app [name]             # Add application to monorepo
+
+Performance and Debugging
+------------------------
+10. Performance Flags
+    - nest build --webpack                # Optimize build with webpack
+    - nest start --debug                  # Enable debugging
+    - nest start --inspect                # Enable Node.js inspector
+
+Customization Options
+--------------------
+11. Generator Flags
+    - --dry-run                           # Preview generation without creating files
+    - --flat                              # Generate without creating extra directory
+    - --spec                              # Generate test files
+    - --no-spec                           # Skip test file generation
+
+Pro Tips
+--------
+- Use 'nest g' with --help to see all generation options
+- Most commands support --dry-run to preview changes
+- Always check official Nest.js documentation for latest CLI features
+
+Troubleshooting
+---------------
+- Ensure Node.js and npm are up to date
+- Use 'nest info' to verify Nest.js installation
+- Check project dependencies if unexpected errors occur
+
+Note: Command availability might depend on Nest.js version.
+Always refer to the official Nest.js documentation for the most up-to-date information.
+
+Would you like me to elaborate on any of these commands or provide more specific usage examples?
