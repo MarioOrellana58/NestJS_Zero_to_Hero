@@ -20,8 +20,8 @@ This repository is a companion to this [Udemy course on NestJS](https://www.udem
 
 Before starting, ensure you meet the following requirements:
 
-- **Basic JavaScript/Node.js Knowledge:** Not needed lol.
-- **Optional TypeScript Knowledge:** Also not needed haha.
+- **Basic JavaScript/Node.js Knowledge:** Understanding JavaScript or Node.js fundamentals is essential.
+- **Optional TypeScript Knowledge:** While not required, familiarity with TypeScript is recommended for a smoother learning experience.
 
 ---
 
